@@ -28,7 +28,8 @@ Accessibility
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+	z-index: 100000;
+	/* Above WP toolbar */
 }
 
 /*--------------------------------------------------------------
@@ -83,12 +84,12 @@ address {
 }
 
 pre {
-    display: inline-block;
-    font-family: "Courier 10 Pitch", Courier, monospace;
-    color: #ddca7e;
-    background: #282c34;
+	display: inline-block;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	color: #ddca7e;
+	background: #282c34;
 	padding: .5em .8em;
-    border-radius: .2em;
+	border-radius: .2em;
 }
 
 code,
@@ -285,28 +286,27 @@ Basic responsive layout for all browsers:
 CSS Grid layout for modern browsers:
 --------------------------------------------------------------*/
 @supports (grid-area: auto) {
-	 @media screen and (min-width: 600px) {
-  .site {
-    max-width: none;
-  }
+	@media screen and (min-width: 600px) {
+		.site {
+			max-width: none;
+		}
 
-  .main-area > *,
-.colophon {
-  display: grid;
-  grid-template-columns:
-    1fr
-    repeat(2, minmax(auto, 25em))
-    1fr;
-} 
+		.main-area>*,
+		.colophon {
+			display: grid;
+			grid-template-columns:
+				1fr repeat(2, minmax(auto, 25em)) 1fr;
+		}
 
-.splash-content,
-.buckets ul,
-.more-content {
-  grid-column: 2 / 4;
-}
+		.splash-content,
+		.buckets ul,
+		.more-content {
+			grid-column: 2 / 4;
+		}
 
-.twin,
-.colophon aside {
-  grid-column: span 2;
-} }
+		.twin,
+		.colophon aside {
+			grid-column: span 2;
+		}
+	}
 }

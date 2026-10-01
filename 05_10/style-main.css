@@ -28,7 +28,8 @@ Accessibility
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+	z-index: 100000;
+	/* Above WP toolbar */
 }
 
 /*--------------------------------------------------------------
@@ -83,12 +84,12 @@ address {
 }
 
 pre {
-    display: inline-block;
-    font-family: "Courier 10 Pitch", Courier, monospace;
-    color: #ddca7e;
-    background: #282c34;
+	display: inline-block;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	color: #ddca7e;
+	background: #282c34;
 	padding: .5em .8em;
-    border-radius: .2em;
+	border-radius: .2em;
 }
 
 code,
@@ -212,14 +213,14 @@ CSS Grid layout for wider screens, when browser supports grid:
 		.cards {
 			margin: 0 auto;
 			padding: 1em;
-			
+
 		}
 
 		.card {
 			margin: 1em 0;
 			padding: .5em;
-			  display: grid;
-  grid-template-columns: 8em auto;
+			display: grid;
+			grid-template-columns: 8em auto;
 		}
 
 		.cards a:focus,
@@ -229,6 +230,26 @@ CSS Grid layout for wider screens, when browser supports grid:
 	}
 
 	@media screen and (min-width: 60em) {
+		.cards {
+			max-width: none;
+			margin: 1em 0;
+			display: grid;
+			grid-template-columns: 25em 25em;
+			grid-gap: 1em;
+			justify-content: center;
+		}
+
+		.card {
+			margin: 0;
+		}
+
+		.double {
+			grid-row: span 3;
+		}
+
+		.double .card {
+			display: block;
+		}
 
 
 
