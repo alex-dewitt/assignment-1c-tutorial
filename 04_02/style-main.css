@@ -285,6 +285,7 @@ Basic responsive layout for all browsers:
 CSS Grid layout for modern browsers:
 --------------------------------------------------------------*/
 @supports (grid-area: auto) {
+	 @media screen and (min-width: 600px) {
   .site {
     max-width: none;
   }
@@ -307,5 +308,5 @@ CSS Grid layout for modern browsers:
 .twin,
 .colophon aside {
   grid-column: span 2;
-}
+} }
 }
